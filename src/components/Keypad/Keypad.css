@@ -1,0 +1,130 @@
+.keypad-container
+{
+    height: 390px;
+    width: 250px;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.actual-keypad
+{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+.num-rows
+{
+    display: flex;
+    justify-content: space-evenly;
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+}
+
+.func-rows
+{
+    display: flex;
+    justify-content: space-evenly;
+    /* padding-bottom: 5px;
+    padding-top: 5px; */
+}
+
+.func-rows > p
+{
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #a6a6a6;
+    color:black;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.func-rows > p:active
+{
+    background-color: gray;
+    box-shadow: 0px 0px 5px gray;
+    transform: translateY(1px);
+}
+
+.num-rows > p
+{
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333333;
+    color: #afafaf;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.num-rows > p:active
+{
+    background-color: #565656;
+    box-shadow: 0px 0px 5px gray;
+    transform: translateY(1px);
+}
+
+
+
+#double-size
+{
+    height: 20px;
+    width: 75px;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: left;
+    line-height: 20px;
+}
+
+.num-rows > .four-or
+{
+    background-color: #ff9501;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+
+.num-rows > .four-or:active
+{
+    background-color: #cd7700;
+    box-shadow: 0px 0px 5px #a6a6a6;
+    transform: translateY(1px);
+}
+
+.func-rows > .four-or
+{
+    background-color: #ff9501;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+
+.func-rows > .four-or:active
+{
+    background-color: #cd7700;
+    box-shadow: 0px 0px 5px #a6a6a6;
+    transform: translateY(1px);   
+}
