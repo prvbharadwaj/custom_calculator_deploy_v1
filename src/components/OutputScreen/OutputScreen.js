@@ -16,21 +16,21 @@ class OutputScreen extends Component {
         {
             if(
                 this.props.op_flag === false && 
-                this.state.display_data !== Number(this.props.num1).toLocaleString("en-US"))
-                    this.setState({display_data : Number(this.props.num1).toLocaleString("en-US")})
+                this.state.display_data !== Number(this.props.num1).toLocaleString("en-US", {minimumFractionDigits : 0, maximumFractionDigits : 12}))
+                    this.setState({display_data : Number(this.props.num1).toLocaleString("en-US", {minimumFractionDigits : 0, maximumFractionDigits : 12})})
 
             else if(
                 this.props.op_flag === true && 
-                this.state.display_data !== Number(this.props.num2).toLocaleString("en-US"))
-                    this.setState({display_data : Number(this.props.num2).toLocaleString("en-US")})
+                this.state.display_data !== Number(this.props.num2).toLocaleString("en-US", {minimumFractionDigits : 0, maximumFractionDigits : 12}))
+                    this.setState({display_data : Number(this.props.num2).toLocaleString("en-US", {minimumFractionDigits : 0, maximumFractionDigits : 12})})
 
         }
         else if(
             this.props.result !== 0 && 
-            this.state.display_data !== Number(this.props.result).toLocaleString("en-US"))            
+            this.state.display_data !== Number(this.props.result).toLocaleString("en-US", {minimumFractionDigits : 0, maximumFractionDigits : 12}))            
                 {
                         // console.log("from display data = result",this.props.num2, this.props.op_flag)
-                        this.setState({display_data : Number(this.props.result).toLocaleString("en-US")})
+                        this.setState({display_data : Number(this.props.result).toLocaleString("en-US", {minimumFractionDigits : 0, maximumFractionDigits : 12})})
                 }                
     }
 
