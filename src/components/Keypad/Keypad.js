@@ -10,7 +10,77 @@ class Keypad extends Component {
     }
 
 
+    handleKeyPress = (e) =>{
+        switch(e.keyCode){
+            case 67:
+                this.props.handleClearInput(1)
+                break;
+            case 8:
+                this.props.handleClearInput(2)
+                break;
+            case 79:
+                this.props.handleOperatorClear()
+                break;
+            case 111 || 220:
+                this.props.handleOperatorInput(1)
+                break;
+            case 55 || 103:
+                this.props.handleNumberInput(7)
+                break;
+            case 56 || 104:
+                this.props.handleNumberInput(8)
+                break;
+            case 57 || 105:
+                this.props.handleNumberInput(9)
+                break;
+            case 106 || (16 && 56):
+                this.props.handleOperatorInput(2)
+                break;
+            case 52 || 100:
+                this.props.handleNumberInput(4)
+                break;
+            case 53 || 101:
+                this.props.handleNumberInput(5)
+                break;
+            case 54 || 102:
+                this.props.handleNumberInput(6)
+                break;
+            case 107 || (16 && 187):
+                this.props.handleOperatorInput(3)
+                break;
+            case 49 || 97:
+                this.props.handleNumberInput(1)
+                break;
+            case 50 || 98:
+                this.props.handleNumberInput(2)
+                break;
+            case 51 || 99:
+                this.props.handleNumberInput(3)
+                break;
+            case 109 || 189:
+                this.props.handleOperatorInput(4)
+                break;
+            case 48 || 96:
+                this.props.handleNumberInput(0)
+                break;
+            case 190:
+                this.props.handleDecimalInput()
+                break;
+            case 187:
+                this.props.handleEqualSign()
+                break;
+            default:
+                break;
+        }
+    }
 
+    componentDidMount(){
+        document.addEventListener('keydown', this.handleKeyPress);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener('keydown', this.handleKeyPress);
+    }
   
 
 

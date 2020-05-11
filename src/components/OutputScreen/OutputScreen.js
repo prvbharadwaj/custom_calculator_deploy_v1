@@ -39,11 +39,14 @@ class OutputScreen extends Component {
     render() {
         return (
             <div className='screen-master'>
-                <div className='operator-dash'>
-                    <p className={(this.props.op["op"] === 'div')?'active':'inactive'}>{'\u00F7'}</p>
-                    <p className={(this.props.op["op"] === 'mul')?'active':'inactive'}id='test'>x</p>
-                    <p className={(this.props.op["op"] === 'add')?'active':'inactive'}>+</p>
-                    <p className={(this.props.op["op"] === 'sub')?'active':'inactive'}>-</p>
+                <div className='dash-parent'>
+                    <div className='switch-icon' onClick={e => this.props.handleSwitchScreen()} style={{color : (this.props.switchStatus), userSelect : 'none'}}>{'\u21CC'}</div>
+                    <div className='operator-dash'>
+                        <p className={(this.props.op["op"] === 'div')?'active':'inactive'}>{'\u00F7'}</p>
+                        <p className={(this.props.op["op"] === 'mul')?'active':'inactive'}id='test'>x</p>
+                        <p className={(this.props.op["op"] === 'add')?'active':'inactive'}>+</p>
+                        <p className={(this.props.op["op"] === 'sub')?'active':'inactive'}>-</p>
+                    </div>
                 </div>
                 <div className='display-section'>
                     {this.state.display_data}

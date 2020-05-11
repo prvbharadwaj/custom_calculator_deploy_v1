@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Keypad from './components/Keypad/Keypad';
 import OutputScreen from './components/OutputScreen/OutputScreen';
+import Convertor from './components/Convertor/Convertor';
 import './App.css';
 
 class App extends Component{
@@ -13,7 +14,8 @@ class App extends Component{
         operator_flag : false,
         operation_object : {},
         decimal_flag1 : false,
-        decimal_flag2 : false
+        decimal_flag2 : false,
+        switch_screen : true,
     };
   }
 
@@ -271,30 +273,51 @@ class App extends Component{
         })
     }
 
+    handleSwitchScreen = () =>{
+        let temp = this.state.switch_screen
+        this.setState({switch_screen : !temp})
+    }
+
 
   render(){
      return (
          <div className='calc-master'>
             <div className="App">
-                <OutputScreen
-                    num1 = {this.state.keyboard_input}
-                    num2 = {this.state.keyboard_input2}
-                    op = {this.state.operation_object}
-                    op_flag = {this.state.operator_flag}
-                    result = {this.state.result}
-                    // decimal_flag1 = {this.state.decimal_flag1}
-                    // decimal_flag2 = {this.state.decimal_flag2}
-                    // result_decimal_flag = {!(Number.isInteger(this.state.result))}
-                />
+                {
+                    (this.state.switch_screen)?
+                    (
+                        <React.Fragment>
+                            <OutputScreen
+                                num1 = {this.state.keyboard_input}
+                                num2 = {this.state.keyboard_input2}
+                                op = {this.state.operation_object}
+                                op_flag = {this.state.operator_flag}
+                                result = {this.state.result}
+                                handleSwitchScreen = {this.handleSwitchScreen}
+                                switchStatus = '#cd7700'
+                                // decimal_flag1 = {this.state.decimal_flag1}
+                                // decimal_flag2 = {this.state.decimal_flag2}
+                                // result_decimal_flag = {!(Number.isInteger(this.state.result))}
+                            />
 
-            <Keypad
-                handleNumberInput = {this.handleNumberInput}
-                handleClearInput = {this.handleClearInput}
-                handleDecimalInput = {this.handleDecimalInput}
-                handleOperatorInput = {this.handleOperatorInput}
-                handleOperatorClear = {this.handleOperatorClear}
-                handleEqualSign = {this.handleEqualSign}
-            />
+                            <Keypad
+                                handleNumberInput = {this.handleNumberInput}
+                                handleClearInput = {this.handleClearInput}
+                                handleDecimalInput = {this.handleDecimalInput}
+                                handleOperatorInput = {this.handleOperatorInput}
+                                handleOperatorClear = {this.handleOperatorClear}
+                                handleEqualSign = {this.handleEqualSign}
+                            />
+                        </React.Fragment>
+                    ):
+                    (
+                        <Convertor
+                            handleSwitchScreen = {this.handleSwitchScreen}
+                            switchStatus = 'white'
+                        />
+                    )
+                }
+                
             </div>
         </div>
       );
