@@ -307,7 +307,7 @@ class App extends Component{
                                 handleOperatorInput = {this.handleOperatorInput}
                                 handleOperatorClear = {this.handleOperatorClear}
                                 handleEqualSign = {this.handleEqualSign}
-                            />
+                            />          
                         </React.Fragment>
                     ):
                     (

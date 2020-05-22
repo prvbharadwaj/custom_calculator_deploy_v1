@@ -1,0 +1,143 @@
+.currency-section-parent
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.first-currency-section
+{
+    width: 90%;
+    float: right;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+}
+.dropdown-container
+{
+    position: absolute;
+    box-shadow: 0px 0px 5px #40343a;
+    border: 0.5px solid #1d1d1d;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 75px;
+    margin-left: 4px;
+}
+.currency-list-dropdown
+{
+    height: 105px;
+    width: 50px;
+    display: none;
+    overflow: auto;
+    background: #1d1d1d;
+    color: white;
+    z-index: 1;
+    scrollbar-width: thin;
+    text-align: left;
+}
+.currency-list-dropdown > p
+{
+    cursor: pointer;
+    padding: 3px;
+    margin: 0px;
+    user-select: none;
+    background: #1d1d1d;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+::-webkit-scrollbar
+{
+    width: 7px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track
+{
+    background: gray;
+    border: none;
+}
+::-webkit-scrollbar-thumb
+{
+    background: #333333;
+    padding: 3px 3px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background: black;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.dropdown-button
+{
+    cursor: pointer;
+    color: white;
+    background: #1d1d1d;
+    border: none;
+    border-radius: 5px;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    height: 25px;
+    padding: 5px;
+}
+.dropdown-arrowmark
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.first-currency-entry
+{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 30px;
+    width: 100px;
+    margin-right: 20px;
+    user-select: none;
+    color: white;
+}
+.first-currency-entry > input
+{
+    width: 90%;
+    height: 90%;
+    border: none;
+    outline: none;
+    background: #121212;
+    color: white;
+    user-select: none;
+}
+.convert-button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: #1d1d1d;
+    margin-top: 3%;
+    user-select: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+.convert-button:active
+{
+    background-color: gray;
+    box-shadow : 0px 0px 5px gray;
+    transform : translateY(1px);
+}
