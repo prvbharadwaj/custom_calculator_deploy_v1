@@ -30,7 +30,7 @@ class Convertor extends Component {
         // .then(resp => console.log(resp));
         // .then(data => console.log(data));
 
-        fetch(`http://data.fixer.io/api/latest?access_key=f7994f6b47018bbb82a5ec0a2cb93f32`)
+        fetch(`https://data.fixer.io/api/latest?access_key=f7994f6b47018bbb82a5ec0a2cb93f32`)
         .then(response => response.json())
         .then(data => this.setState({
             response : data,
