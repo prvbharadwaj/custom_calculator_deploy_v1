@@ -19,6 +19,8 @@ class App extends Component{
     };
   }
 
+//   "proxy": "http://data.fixer.io/api",
+
 
   handleNumberInput = (num) =>{
         if(!this.state.operator_flag) //holds 1st number
